@@ -1,0 +1,66 @@
+<!ELEMENT ECommerce (Customers, Addresses, Categories, Products, Shippers, Orders, OrderDetails, Payments, Trackings)>
+
+<!--KHAI BÁO MỖI ELEMENT MỘT LẦN DUY NHẤT -->
+<!ELEMENT CustomerID (#PCDATA)>
+<!ELEMENT FullName (#PCDATA)>
+<!ELEMENT Phone (#PCDATA)>
+<!ELEMENT Email (#PCDATA)>
+<!ELEMENT DefaultAddressID (#PCDATA)>
+<!ELEMENT AddressID (#PCDATA)>
+<!ELEMENT Street (#PCDATA)>
+<!ELEMENT City (#PCDATA)>
+<!ELEMENT District (#PCDATA)>
+<!ELEMENT Ward (#PCDATA)>
+<!ELEMENT CategoryID (#PCDATA)>
+<!ELEMENT CategoryName (#PCDATA)>
+<!ELEMENT Description (#PCDATA)>
+<!ELEMENT ProductID (#PCDATA)>
+<!ELEMENT ProductName (#PCDATA)>
+<!ELEMENT Price (#PCDATA)>
+<!ELEMENT Weight (#PCDATA)>
+<!ELEMENT ShipperID (#PCDATA)>
+<!ELEMENT ImgUrl (#PCDATA)>
+<!ELEMENT Area (#PCDATA)>
+<!ELEMENT OrderID (#PCDATA)>
+<!ELEMENT OrderDate (#PCDATA)>
+<!ELEMENT Status (#PCDATA)>
+<!ELEMENT TotalAmount (#PCDATA)>
+<!ELEMENT Quantity (#PCDATA)>
+<!ELEMENT UnitPrice (#PCDATA)>
+<!ELEMENT PaymentID (#PCDATA)>
+<!ELEMENT PaymentType (#PCDATA)>
+<!ELEMENT PaymentStatus (#PCDATA)>
+<!ELEMENT PaymentDate (#PCDATA)>
+<!ELEMENT TrackingID (#PCDATA)>
+<!ELEMENT Location (#PCDATA)>
+<!ELEMENT UpdateTime (#PCDATA)>
+<!ELEMENT EstimatedDeliveryTime (#PCDATA)>
+<!ELEMENT Note (#PCDATA)>
+
+<!-- ĐỊNH NGHĨA CẤU TRÚC CÁC ENTITY -->
+<!ELEMENT Customers (Customer+)>
+<!ELEMENT Customer (CustomerID, FullName, Phone, Email, DefaultAddressID)>
+
+<!ELEMENT Addresses (Address+)>
+<!ELEMENT Address (AddressID, CustomerID, Street, City, District, Ward)>
+
+<!ELEMENT Categories (Category+)>
+<!ELEMENT Category (CategoryID, CategoryName, Description)>
+
+<!ELEMENT Products (Product+)>
+<!ELEMENT Product (ProductID, ProductName, Price, Weight, CategoryID)>
+
+<!ELEMENT Shippers (Shipper+)>
+<!ELEMENT Shipper (ShipperID, FullName, ImgUrl, Phone, Area)>
+
+<!ELEMENT Orders (Order+)>
+<!ELEMENT Order (OrderID, CustomerID, ShipperID, OrderDate, AddressID, Status, TotalAmount)>
+
+<!ELEMENT OrderDetails (OrderDetail+)>
+<!ELEMENT OrderDetail (OrderID, ProductID, Quantity, UnitPrice)>
+
+<!ELEMENT Payments (Payment+)>
+<!ELEMENT Payment (PaymentID, OrderID, PaymentType, PaymentStatus, PaymentDate)>
+
+<!ELEMENT Trackings (Tracking+)>
+<!ELEMENT Tracking (TrackingID, OrderID, Status, Location, UpdateTime, EstimatedDeliveryTime, Note)>

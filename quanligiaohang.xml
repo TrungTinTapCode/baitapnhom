@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ECommerce SYSTEM "quanligiaohang.dtd">
+<ECommerce>
+  <Customers>
+    <Customer>
+      <CustomerID>1</CustomerID>
+      <FullName>Nguyễn Văn A</FullName>
+      <Phone>0912345678</Phone>
+      <Email>a.nguyen@example.com</Email>
+      <DefaultAddressID>101</DefaultAddressID>
+    </Customer>
+    <Customer>
+      <CustomerID>2</CustomerID>
+      <FullName>Trần Thị B</FullName>
+      <Phone>0923456789</Phone>
+      <Email>b.tran@example.com</Email>
+      <DefaultAddressID>102</DefaultAddressID>
+    </Customer>
+    <!-- Thêm 5 khách hàng khác -->
+  </Customers>
+
+  <Addresses>
+    <Address>
+      <AddressID>101</AddressID>
+      <CustomerID>1</CustomerID>
+      <Street>123 Lê Lợi</Street>
+      <City>Hà Nội</City>
+      <District>Hoàn Kiếm</District>
+      <Ward>Hàng Trống</Ward>
+    </Address>
+    <!-- Thêm 6 địa chỉ khác -->
+  </Addresses>
+
+  <Categories>
+    <Category>
+      <CategoryID>1</CategoryID>
+      <CategoryName>Điện thoại</CategoryName>
+      <Description>Smartphone và phụ kiện</Description>
+    </Category>
+    <!-- Thêm 6 danh mục khác -->
+  </Categories>
+
+  <Products>
+    <Product>
+      <ProductID>1</ProductID>
+      <ProductName>iPhone 14</ProductName>
+      <Price>25000000</Price>
+      <Weight>0.172</Weight>
+      <CategoryID>1</CategoryID>
+    </Product>
+    <!-- Thêm 6 sản phẩm khác -->
+  </Products>
+
+  <Shippers>
+    <Shipper>
+      <ShipperID>1</ShipperID>
+      <FullName>Lê Văn C</FullName>
+      <ImgUrl>/images/shipper1.jpg</ImgUrl>
+      <Phone>0934567890</Phone>
+      <Area>Hà Nội</Area>
+    </Shipper>
+    <!-- Thêm 6 shipper khác -->
+  </Shippers>
+
+  <Orders>
+    <Order>
+      <OrderID>1001</OrderID>
+      <CustomerID>1</CustomerID>
+      <ShipperID>1</ShipperID>
+      <OrderDate>2024-10-01</OrderDate>
+      <AddressID>101</AddressID>
+      <Status>Đang giao</Status>
+      <TotalAmount>25000000</TotalAmount>
+    </Order>
+    <!-- Thêm 6 đơn hàng khác -->
+  </Orders>
+
+  <OrderDetails>
+    <OrderDetail>
+      <OrderID>1001</OrderID>
+      <ProductID>1</ProductID>
+      <Quantity>1</Quantity>
+      <UnitPrice>25000000</UnitPrice>
+    </OrderDetail>
+    <!-- Thêm 6 chi tiết đơn hàng khác -->
+  </OrderDetails>
+
+  <Payments>
+    <Payment>
+      <PaymentID>1</PaymentID>
+      <OrderID>1001</OrderID>
+      <PaymentType>Credit Card</PaymentType>
+      <PaymentStatus>Paid</PaymentStatus>
+      <PaymentDate>2024-10-01</PaymentDate>
+    </Payment>
+    <!-- Thêm 6 thanh toán khác -->
+  </Payments>
+
+  <Trackings>
+    <Tracking>
+      <TrackingID>1</TrackingID>
+      <OrderID>1001</OrderID>
+      <Status>Shipped</Status>
+      <Location>Hà Nội</Location>
+      <UpdateTime>2024-10-02T08:00:00</UpdateTime>
+      <EstimatedDeliveryTime>2024-10-05T12:00:00</EstimatedDeliveryTime>
+      <Note>Đang trên đường giao</Note>
+    </Tracking>
+    <!-- Thêm 6 tracking khác -->
+  </Trackings>
+</ECommerce>
