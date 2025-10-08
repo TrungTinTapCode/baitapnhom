@@ -4,19 +4,53 @@
   <Customers>
     <Customer>
       <CustomerID>1</CustomerID>
-      <FullName>Nguyễn Văn A</FullName>
+      <FullName>Nguyễn Văn An</FullName>
       <Phone>0912345678</Phone>
-      <Email>a.nguyen@example.com</Email>
+      <Email>an.nguyen@gmail.com</Email>
       <DefaultAddressID>101</DefaultAddressID>
     </Customer>
     <Customer>
       <CustomerID>2</CustomerID>
-      <FullName>Trần Thị B</FullName>
+      <FullName>Thái Võ Tường Vy</FullName>
       <Phone>0923456789</Phone>
-      <Email>b.tran@example.com</Email>
+      <Email>vy.thaivo@gmail.com</Email>
       <DefaultAddressID>102</DefaultAddressID>
     </Customer>
-    <!-- Thêm 5 khách hàng khác -->
+     <Customer>
+      <CustomerID>3</CustomerID>
+      <FullName>Trần My</FullName>
+      <Phone>0933456789</Phone>
+      <Email>my.tran@gmail.com</Email>
+      <DefaultAddressID>103</DefaultAddressID>
+    </Customer>
+     <Customer>
+      <CustomerID>4</CustomerID>
+      <FullName>Nguyễn Chí Hùng</FullName>
+      <Phone>0943456789</Phone>
+      <Email>hung.nguyen@gmail.com</Email>
+      <DefaultAddressID>104</DefaultAddressID>
+    </Customer>
+     <Customer>
+      <CustomerID>5</CustomerID>
+      <FullName>Mai Kim Trí</FullName>
+      <Phone>0953456789</Phone>
+      <Email>tri.mai@gmail.com</Email>
+      <DefaultAddressID>105</DefaultAddressID>
+    </Customer>
+     <Customer>
+      <CustomerID>6</CustomerID>
+      <FullName>Huỳnh Hữu Phước</FullName>
+      <Phone>0963456789</Phone>
+      <Email>phuoc.huynh@gmail.com</Email>
+      <DefaultAddressID>106</DefaultAddressID>
+    </Customer>
+     <Customer>
+      <CustomerID>7</CustomerID>
+      <FullName>Nguyễn Trung Tín</FullName>
+      <Phone>0973456789</Phone>
+      <Email>tin.nguyen@gmail.com</Email>
+      <DefaultAddressID>107</DefaultAddressID>
+    </Customer>
   </Customers>
 
   <Addresses>
@@ -24,12 +58,60 @@
       <AddressID>101</AddressID>
       <CustomerID>1</CustomerID>
       <Street>123 Lê Lợi</Street>
-      <City>Hà Nội</City>
-      <District>Hoàn Kiếm</District>
-      <Ward>Hàng Trống</Ward>
+      <City>Cần Thơ</City>
+      <District>Ninh Kiêu</District>
+      <Ward>An Hòa</Ward>
     </Address>
-    <!-- Thêm 6 địa chỉ khác -->
+    <Address>
+      <AddressID>102</AddressID>
+      <CustomerID>2</CustomerID>
+      <Street>12 Lê Hồng Phong</Street>
+      <City>Cần Thơ</City>
+      <District>Ninh Kiều</District>
+      <Ward>An Khánh</Ward>
+    </Address>
+    <Address>
+      <AddressID>103</AddressID>
+      <CustomerID>3</CustomerID>
+      <Street>123 cách mạng tháng 8</Street>
+      <City>Cần Thơ</City>
+      <District>Ninh Kiều</District>
+      <Ward>An Phú</Ward>
+    </Address>
+    <Address>
+      <AddressID>104</AddressID>
+      <CustomerID>4</CustomerID>
+      <Street>34 Hai Bà Trưng</Street>
+      <City>Cần Thơ</City>
+      <District>Ô Môn</District>
+      <Ward>Hậu Nghĩa</Ward>
+    </Address>
+    <Address>
+      <AddressID>105</AddressID>
+      <CustomerID>5</CustomerID>
+      <Street>123 Lý Tự Trọng</Street>
+      <City>Cần Thơ</City>
+      <District>Ô Môn</District>
+      <Ward>Bình An</Ward>
+    </Address>
+    <Address>
+      <AddressID>106</AddressID>
+      <CustomerID>6</CustomerID>
+      <Street>123 Lê Lợi</Street>
+      <City>Cần Thơ</City>
+      <District>Bình Thủy</District>
+      <Ward>Hạnh Phúc</Ward>
+    </Address>
+    <Address>
+      <AddressID>107</AddressID>
+      <CustomerID>7</CustomerID>
+      <Street>3 Võ Trường Toản</Street>
+      <City>Cần Thơ</City>
+      <District>Bình Thủy</District>
+      <Ward>Khánh An</Ward>
+    </Address>
   </Addresses>
+
 
   <Categories>
     <Category>
@@ -37,7 +119,36 @@
       <CategoryName>Điện thoại</CategoryName>
       <Description>Smartphone và phụ kiện</Description>
     </Category>
-    <!-- Thêm 6 danh mục khác -->
+    <Category>
+      <CategoryID>2</CategoryID>
+      <CategoryName>Gia Dụng</CategoryName>
+      <Description>Đồ gia dụng các loại</Description>
+    </Category>
+    <Category>
+      <CategoryID>3</CategoryID>
+      <CategoryName>Mỹ Phẩm</CategoryName>
+      <Description>các sản phẩm làm đẹp</Description>
+    </Category>
+    <Category>
+      <CategoryID>4</CategoryID>
+      <CategoryName>Phụ kiện công nghệ</CategoryName>
+      <Description>Tai nghe, sạc, cáp</Description>
+    </Category>
+    <Category>
+      <CategoryID>5</CategoryID>
+      <CategoryName>Thời trang</CategoryName>
+      <Description>Áo, quần, giày, túi xách, đồng hồ,...</Description>
+    </Category>
+    <Category>
+      <CategoryID>6</CategoryID>
+      <CategoryName>Thực phẩm-Đồ uống</CategoryName>
+      <Description>Thực phẩm đóng gói, cà phê, Trà</Description>
+    </Category>
+    <Category>
+      <CategoryID>7</CategoryID>
+      <CategoryName>Thiết bị mạng</CategoryName>
+      <Description>Router, modem, bộ phát WiFi</Description>
+    </Category>
   </Categories>
 
   <Products>
@@ -48,7 +159,48 @@
       <Weight>0.172</Weight>
       <CategoryID>1</CategoryID>
     </Product>
-    <!-- Thêm 6 sản phẩm khác -->
+    <Product>
+      <ProductID>2</ProductID>
+      <ProductName>Samsung Galaxy S23</ProductName>
+      <Price>21000000</Price>
+      <Weight>0.168</Weight>
+      <CategoryID>1</CategoryID>
+    </Product>
+    <Product>
+      <ProductID>3</ProductID>
+      <ProductName>MacBook Air M2</ProductName>
+      <Price>32000000</Price>
+      <Weight>1.24</Weight>
+      <CategoryID>2</CategoryID>
+    </Product>
+    <Product>
+      <ProductID>4</ProductID>
+      <ProductName>iPad Pro 11</ProductName>
+      <Price>27000000</Price>
+      <Weight>0.470</Weight>
+      <CategoryID>3</CategoryID>
+    </Product>
+    <Product>
+      <ProductID>5</ProductID>
+      <ProductName>AirPods Pro 2</ProductName>
+      <Price>5500000</Price>
+      <Weight>0.056</Weight>
+      <CategoryID>4</CategoryID>
+    </Product>
+    <Product>
+      <ProductID>6</ProductID>
+      <ProductName>Apple Watch Series 9</ProductName>
+      <Price>13000000</Price>
+      <Weight>0.040</Weight>
+      <CategoryID>5</CategoryID>
+    </Product>
+    <Product>
+      <ProductID>7</ProductID>
+      <ProductName>Canon EOS M50</ProductName>
+      <Price>15500000</Price>
+      <Weight>0.387</Weight>
+      <CategoryID>6</CategoryID>
+    </Product>
   </Products>
 
   <Shippers>
@@ -59,7 +211,48 @@
       <Phone>0934567890</Phone>
       <Area>Hà Nội</Area>
     </Shipper>
-    <!-- Thêm 6 shipper khác -->
+    <Shipper>
+      <ShipperID>2</ShipperID>
+      <FullName>Nguyễn Văn D</FullName>
+      <ImgUrl>/images/shipper2.jpg</ImgUrl>
+      <Phone>0987654321</Phone>
+      <Area>TP. Hồ Chí Minh</Area>
+    </Shipper>
+    <Shipper>
+      <ShipperID>3</ShipperID>
+      <FullName>Trần Thị H</FullName>
+      <ImgUrl>/images/shipper3.jpg</ImgUrl>
+      <Phone>0912345678</Phone>
+      <Area>Đà Nẵng</Area>
+    </Shipper>
+    <Shipper>
+      <ShipperID>4</ShipperID>
+      <FullName>Phạm Văn E</FullName>
+      <ImgUrl>/images/shipper4.jpg</ImgUrl>
+      <Phone>0901112233</Phone>
+      <Area>Cần Thơ</Area>
+    </Shipper>
+    <Shipper>
+      <ShipperID>5</ShipperID>
+      <FullName>Ngô Thị M</FullName>
+      <ImgUrl>/images/shipper5.jpg</ImgUrl>
+      <Phone>0977223344</Phone>
+      <Area>Hải Phòng</Area>
+    </Shipper>
+    <Shipper>
+      <ShipperID>6</ShipperID>
+      <FullName>Hoàng Quốc Bảo</FullName>
+      <ImgUrl>/images/shipper6.jpg</ImgUrl>
+      <Phone>0969334455</Phone>
+      <Area>Nha Trang</Area>
+    </Shipper>
+    <Shipper>
+      <ShipperID>7</ShipperID>
+      <FullName>Đinh Văn L</FullName>
+      <ImgUrl>/images/shipper7.jpg</ImgUrl>
+      <Phone>0933998877</Phone>
+      <Area>Huế</Area>
+    </Shipper>
   </Shippers>
 
   <Orders>
@@ -72,7 +265,60 @@
       <Status>Đang giao</Status>
       <TotalAmount>25000000</TotalAmount>
     </Order>
-    <!-- Thêm 6 đơn hàng khác -->
+    <Order>
+      <OrderID>1002</OrderID>
+      <CustomerID>2</CustomerID>
+      <ShipperID>2</ShipperID>
+      <OrderDate>2024-10-02</OrderDate>
+      <AddressID>102</AddressID>
+      <Status>Hoàn tất</Status>
+      <TotalAmount>21000000</TotalAmount>
+    </Order>
+    <Order>
+      <OrderID>1003</OrderID>
+      <CustomerID>3</CustomerID>
+      <ShipperID>3</ShipperID>
+      <OrderDate>2024-10-03</OrderDate>
+      <AddressID>103</AddressID>
+      <Status>Đang xử lý</Status>
+      <TotalAmount>32000000</TotalAmount>
+    </Order>
+    <Order>
+      <OrderID>1004</OrderID>
+      <CustomerID>4</CustomerID>
+      <ShipperID>4</ShipperID>
+      <OrderDate>2024-10-04</OrderDate>
+      <AddressID>104</AddressID>
+      <Status>Đang giao</Status>
+      <TotalAmount>5500000</TotalAmount>
+    </Order>
+    <Order>
+      <OrderID>1005</OrderID>
+      <CustomerID>5</CustomerID>
+      <ShipperID>5</ShipperID>
+      <OrderDate>2024-10-05</OrderDate>
+      <AddressID>105</AddressID>
+      <Status>Đã hủy</Status>
+      <TotalAmount>15500000</TotalAmount>
+    </Order>
+    <Order>
+      <OrderID>1006</OrderID>
+      <CustomerID>6</CustomerID>
+      <ShipperID>6</ShipperID>
+      <OrderDate>2024-10-06</OrderDate>
+      <AddressID>106</AddressID>
+      <Status>Hoàn tất</Status>
+      <TotalAmount>13000000</TotalAmount>
+    </Order>
+    <Order>
+      <OrderID>1007</OrderID>
+      <CustomerID>7</CustomerID>
+      <ShipperID>7</ShipperID>
+      <OrderDate>2024-10-07</OrderDate>
+      <AddressID>107</AddressID>
+      <Status>Đang giao</Status>
+      <TotalAmount>27000000</TotalAmount>
+    </Order>
   </Orders>
 
   <OrderDetails>
@@ -82,7 +328,42 @@
       <Quantity>1</Quantity>
       <UnitPrice>25000000</UnitPrice>
     </OrderDetail>
-    <!-- Thêm 6 chi tiết đơn hàng khác -->
+    <OrderDetail>
+      <OrderID>1002</OrderID>
+      <ProductID>2</ProductID>
+      <Quantity>1</Quantity>
+      <UnitPrice>21000000</UnitPrice>
+    </OrderDetail>
+    <OrderDetail>
+      <OrderID>1003</OrderID>
+      <ProductID>3</ProductID>
+      <Quantity>1</Quantity>
+      <UnitPrice>32000000</UnitPrice>
+    </OrderDetail>
+    <OrderDetail>
+      <OrderID>1004</OrderID>
+      <ProductID>5</ProductID>
+      <Quantity>1</Quantity>
+      <UnitPrice>5500000</UnitPrice>
+    </OrderDetail>
+    <OrderDetail>
+      <OrderID>1005</OrderID>
+      <ProductID>7</ProductID>
+      <Quantity>1</Quantity>
+      <UnitPrice>15500000</UnitPrice>
+    </OrderDetail>
+    <OrderDetail>
+      <OrderID>1006</OrderID>
+      <ProductID>6</ProductID>
+      <Quantity>1</Quantity>
+      <UnitPrice>13000000</UnitPrice>
+    </OrderDetail>
+    <OrderDetail>
+      <OrderID>1007</OrderID>
+      <ProductID>4</ProductID>
+      <Quantity>1</Quantity>
+      <UnitPrice>27000000</UnitPrice>
+    </OrderDetail>
   </OrderDetails>
 
   <Payments>
@@ -93,7 +374,48 @@
       <PaymentStatus>Paid</PaymentStatus>
       <PaymentDate>2024-10-01</PaymentDate>
     </Payment>
-    <!-- Thêm 6 thanh toán khác -->
+    <Payment>
+      <PaymentID>2</PaymentID>
+      <OrderID>1002</OrderID>
+      <PaymentType>COD</PaymentType>
+      <PaymentStatus>Paid</PaymentStatus>
+      <PaymentDate>2024-10-02</PaymentDate>
+    </Payment>
+    <Payment>
+      <PaymentID>3</PaymentID>
+      <OrderID>1003</OrderID>
+      <PaymentType>Bank Transfer</PaymentType>
+      <PaymentStatus>Pending</PaymentStatus>
+      <PaymentDate>2024-10-03</PaymentDate>
+    </Payment>
+    <Payment>
+      <PaymentID>4</PaymentID>
+      <OrderID>1004</OrderID>
+      <PaymentType>Momo</PaymentType>
+      <PaymentStatus>Paid</PaymentStatus>
+      <PaymentDate>2024-10-04</PaymentDate>
+    </Payment>
+    <Payment>
+      <PaymentID>5</PaymentID>
+      <OrderID>1005</OrderID>
+      <PaymentType>COD</PaymentType>
+      <PaymentStatus>Cancelled</PaymentStatus>
+      <PaymentDate>2024-10-05</PaymentDate>
+    </Payment>
+    <Payment>
+      <PaymentID>6</PaymentID>
+      <OrderID>1006</OrderID>
+      <PaymentType>Credit Card</PaymentType>
+      <PaymentStatus>Paid</PaymentStatus>
+      <PaymentDate>2024-10-06</PaymentDate>
+    </Payment>
+    <Payment>
+      <PaymentID>7</PaymentID>
+      <OrderID>1007</OrderID>
+      <PaymentType>Momo</PaymentType>
+      <PaymentStatus>Pending</PaymentStatus>
+      <PaymentDate>2024-10-07</PaymentDate>
+    </Payment>
   </Payments>
 
   <Trackings>
@@ -106,6 +428,59 @@
       <EstimatedDeliveryTime>2024-10-05T12:00:00</EstimatedDeliveryTime>
       <Note>Đang trên đường giao</Note>
     </Tracking>
-    <!-- Thêm 6 tracking khác -->
+    <Tracking>
+      <TrackingID>2</TrackingID>
+      <OrderID>1002</OrderID>
+      <Status>Delivered</Status>
+      <Location>TP. Hồ Chí Minh</Location>
+      <UpdateTime>2024-10-03T10:00:00</UpdateTime>
+      <EstimatedDeliveryTime>2024-10-03T11:00:00</EstimatedDeliveryTime>
+      <Note>Đã giao thành công</Note>
+    </Tracking>
+    <Tracking>
+      <TrackingID>3</TrackingID>
+      <OrderID>1003</OrderID>
+      <Status>Processing</Status>
+      <Location>Đà Nẵng</Location>
+      <UpdateTime>2024-10-04T09:00:00</UpdateTime>
+      <EstimatedDeliveryTime>2024-10-07T12:00:00</EstimatedDeliveryTime>
+      <Note>Đang đóng gói</Note>
+    </Tracking>
+    <Tracking>
+      <TrackingID>4</TrackingID>
+      <OrderID>1004</OrderID>
+      <Status>Shipped</Status>
+      <Location>Cần Thơ</Location>
+      <UpdateTime>2024-10-05T15:00:00</UpdateTime>
+      <EstimatedDeliveryTime>2024-10-08T09:00:00</EstimatedDeliveryTime>
+      <Note>Đang vận chuyển</Note>
+    </Tracking>
+    <Tracking>
+      <TrackingID>5</TrackingID>
+      <OrderID>1005</OrderID>
+      <Status>Cancelled</Status>
+      <Location>Hải Phòng</Location>
+      <UpdateTime>2024-10-06T11:00:00</UpdateTime>
+      <EstimatedDeliveryTime></EstimatedDeliveryTime>
+      <Note>Khách hủy đơn</Note>
+    </Tracking>
+    <Tracking>
+      <TrackingID>6</TrackingID>
+      <OrderID>1006</OrderID>
+      <Status>Delivered</Status>
+      <Location>Nha Trang</Location>
+      <UpdateTime>2024-10-07T13:00:00</UpdateTime>
+      <EstimatedDeliveryTime>2024-10-07T11:00:00</EstimatedDeliveryTime>
+      <Note>Đã giao hàng</Note>
+    </Tracking>
+    <Tracking>
+      <TrackingID>7</TrackingID>
+      <OrderID>1007</OrderID>
+      <Status>In Transit</Status>
+      <Location>Huế</Location>
+      <UpdateTime>2024-10-08T14:00:00</UpdateTime>
+      <EstimatedDeliveryTime>2024-10-10T12:00:00</EstimatedDeliveryTime>
+      <Note>Đang giao</Note>
+    </Tracking>
   </Trackings>
 </ECommerce>
