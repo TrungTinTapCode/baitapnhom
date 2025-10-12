@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
+  <!-- Root -->
   <xs:element name="ECommerce">
     <xs:complexType>
       <xs:sequence>
@@ -17,164 +18,173 @@
     </xs:complexType>
   </xs:element>
 
+  <!-- Customers -->
   <xs:element name="Customers">
     <xs:complexType>
       <xs:sequence>
         <xs:element name="Customer" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="CustomerID" type="xs:int"/>
               <xs:element name="FullName" type="xs:string"/>
               <xs:element name="Phone" type="xs:string"/>
               <xs:element name="Email" type="xs:string"/>
-              <xs:element name="DefaultAddressID" type="xs:int"/>
             </xs:sequence>
+            <xs:attribute name="CustomerID" type="xs:ID" use="required"/>
+            <xs:attribute name="DefaultAddressID" type="xs:IDREF" use="optional"/>
           </xs:complexType>
         </xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 
+  <!-- Addresses -->
   <xs:element name="Addresses">
     <xs:complexType>
       <xs:sequence>
         <xs:element name="Address" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="AddressID" type="xs:int"/>
-              <xs:element name="CustomerID" type="xs:int"/>
               <xs:element name="Street" type="xs:string"/>
               <xs:element name="City" type="xs:string"/>
               <xs:element name="District" type="xs:string"/>
               <xs:element name="Ward" type="xs:string"/>
             </xs:sequence>
+            <xs:attribute name="AddressID" type="xs:ID" use="required"/>
+            <xs:attribute name="CustomerID" type="xs:IDREF" use="required"/>
           </xs:complexType>
         </xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 
+  <!-- Categories -->
   <xs:element name="Categories">
     <xs:complexType>
       <xs:sequence>
         <xs:element name="Category" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="CategoryID" type="xs:int"/>
               <xs:element name="CategoryName" type="xs:string"/>
               <xs:element name="Description" type="xs:string"/>
             </xs:sequence>
+            <xs:attribute name="CategoryID" type="xs:ID" use="required"/>
           </xs:complexType>
         </xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 
+  <!-- Products -->
   <xs:element name="Products">
     <xs:complexType>
       <xs:sequence>
         <xs:element name="Product" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ProductID" type="xs:int"/>
               <xs:element name="ProductName" type="xs:string"/>
               <xs:element name="Price" type="xs:decimal"/>
               <xs:element name="Weight" type="xs:decimal"/>
-              <xs:element name="CategoryID" type="xs:int"/>
             </xs:sequence>
+            <xs:attribute name="ProductID" type="xs:ID" use="required"/>
+            <xs:attribute name="CategoryID" type="xs:IDREF" use="required"/>
           </xs:complexType>
         </xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 
+  <!-- Shippers -->
   <xs:element name="Shippers">
     <xs:complexType>
       <xs:sequence>
         <xs:element name="Shipper" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ShipperID" type="xs:int"/>
               <xs:element name="FullName" type="xs:string"/>
               <xs:element name="ImgUrl" type="xs:string"/>
               <xs:element name="Phone" type="xs:string"/>
               <xs:element name="Area" type="xs:string"/>
             </xs:sequence>
+            <xs:attribute name="ShipperID" type="xs:ID" use="required"/>
           </xs:complexType>
         </xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 
+  <!-- Orders -->
   <xs:element name="Orders">
     <xs:complexType>
       <xs:sequence>
         <xs:element name="Order" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="OrderID" type="xs:int"/>
-              <xs:element name="CustomerID" type="xs:int"/>
-              <xs:element name="ShipperID" type="xs:int"/>
               <xs:element name="OrderDate" type="xs:date"/>
-              <xs:element name="AddressID" type="xs:int"/>
               <xs:element name="Status" type="xs:string"/>
               <xs:element name="TotalAmount" type="xs:decimal"/>
             </xs:sequence>
+            <xs:attribute name="OrderID" type="xs:ID" use="required"/>
+            <xs:attribute name="CustomerID" type="xs:IDREF" use="required"/>
+            <xs:attribute name="ShipperID" type="xs:IDREF" use="optional"/>
+            <xs:attribute name="AddressID" type="xs:IDREF" use="optional"/>
           </xs:complexType>
         </xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 
+  <!-- OrderDetails -->
   <xs:element name="OrderDetails">
     <xs:complexType>
       <xs:sequence>
         <xs:element name="OrderDetail" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="OrderID" type="xs:int"/>
-              <xs:element name="ProductID" type="xs:int"/>
               <xs:element name="Quantity" type="xs:int"/>
               <xs:element name="UnitPrice" type="xs:decimal"/>
             </xs:sequence>
+            <xs:attribute name="OrderID" type="xs:IDREF" use="required"/>
+            <xs:attribute name="ProductID" type="xs:IDREF" use="required"/>
           </xs:complexType>
         </xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 
+  <!-- Payments -->
   <xs:element name="Payments">
     <xs:complexType>
       <xs:sequence>
         <xs:element name="Payment" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="PaymentID" type="xs:int"/>
-              <xs:element name="OrderID" type="xs:int"/>
               <xs:element name="PaymentType" type="xs:string"/>
               <xs:element name="PaymentStatus" type="xs:string"/>
               <xs:element name="PaymentDate" type="xs:date"/>
             </xs:sequence>
+            <xs:attribute name="PaymentID" type="xs:ID" use="required"/>
+            <xs:attribute name="OrderID" type="xs:IDREF" use="required"/>
           </xs:complexType>
         </xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 
+  <!-- Trackings -->
   <xs:element name="Trackings">
     <xs:complexType>
       <xs:sequence>
         <xs:element name="Tracking" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="TrackingID" type="xs:int"/>
-              <xs:element name="OrderID" type="xs:int"/>
               <xs:element name="Status" type="xs:string"/>
               <xs:element name="Location" type="xs:string"/>
               <xs:element name="UpdateTime" type="xs:dateTime"/>
               <xs:element name="EstimatedDeliveryTime" type="xs:dateTime"/>
               <xs:element name="Note" type="xs:string"/>
             </xs:sequence>
+            <xs:attribute name="TrackingID" type="xs:ID" use="required"/>
+            <xs:attribute name="OrderID" type="xs:IDREF" use="required"/>
           </xs:complexType>
         </xs:element>
       </xs:sequence>
