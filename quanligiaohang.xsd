@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <!-- Address Group -->
+  <xs:group name="AddressGroup">
+    <xs:sequence>
+      <xs:element name="Street" type="xs:string"/>
+      <xs:element name="City" type="xs:string"/>
+      <xs:element name="District" type="xs:string"/>
+      <xs:element name="Ward" type="xs:string"/>
+    </xs:sequence>
+  </xs:group>
 
-  <!-- Root -->
+  <!-- Contact Info Group -->
+  <xs:group name="ContactInfoGroup">
+    <xs:sequence>
+      <xs:element name="FullName" type="xs:string"/>
+      <xs:element name="Phone" type="xs:string"/>
+      <xs:element name="Email" type="xs:string"/>
+    </xs:sequence>
+  </xs:group>
+
+  <!-- Order Reference Attribute Group -->
+  <xs:attributeGroup name="OrderReferenceGroup">
+    <xs:attribute name="OrderID" type="xs:IDREF" use="required"/>
+  </xs:attributeGroup>
+
+  <!-- Customer Reference Attribute Group -->
+  <xs:attributeGroup name="CustomerReferenceGroup">
+    <xs:attribute name="CustomerID" type="xs:IDREF" use="required"/>
+  </xs:attributeGroup>
+
   <xs:element name="ECommerce">
     <xs:complexType>
       <xs:sequence>
@@ -25,9 +53,7 @@
         <xs:element name="Customer" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="FullName" type="xs:string"/>
-              <xs:element name="Phone" type="xs:string"/>
-              <xs:element name="Email" type="xs:string"/>
+              <xs:group ref="ContactInfoGroup"/>
             </xs:sequence>
             <xs:attribute name="CustomerID" type="xs:ID" use="required"/>
             <xs:attribute name="DefaultAddressID" type="xs:IDREF" use="optional"/>
@@ -44,10 +70,7 @@
         <xs:element name="Address" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Street" type="xs:string"/>
-              <xs:element name="City" type="xs:string"/>
-              <xs:element name="District" type="xs:string"/>
-              <xs:element name="Ward" type="xs:string"/>
+              <xs:group ref="AddressGroup"/>
             </xs:sequence>
             <xs:attribute name="AddressID" type="xs:ID" use="required"/>
             <xs:attribute name="CustomerID" type="xs:IDREF" use="required"/>
@@ -100,9 +123,8 @@
         <xs:element name="Shipper" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="FullName" type="xs:string"/>
+              <xs:group ref="ContactInfoGroup"/>
               <xs:element name="ImgUrl" type="xs:string"/>
-              <xs:element name="Phone" type="xs:string"/>
               <xs:element name="Area" type="xs:string"/>
             </xs:sequence>
             <xs:attribute name="ShipperID" type="xs:ID" use="required"/>
@@ -124,7 +146,7 @@
               <xs:element name="TotalAmount" type="xs:decimal"/>
             </xs:sequence>
             <xs:attribute name="OrderID" type="xs:ID" use="required"/>
-            <xs:attribute name="CustomerID" type="xs:IDREF" use="required"/>
+            <xs:attributeGroup ref="CustomerReferenceGroup"/>
             <xs:attribute name="ShipperID" type="xs:IDREF" use="optional"/>
             <xs:attribute name="AddressID" type="xs:IDREF" use="optional"/>
           </xs:complexType>
@@ -143,7 +165,7 @@
               <xs:element name="Quantity" type="xs:int"/>
               <xs:element name="UnitPrice" type="xs:decimal"/>
             </xs:sequence>
-            <xs:attribute name="OrderID" type="xs:IDREF" use="required"/>
+            <xs:attributeGroup ref="OrderReferenceGroup"/>
             <xs:attribute name="ProductID" type="xs:IDREF" use="required"/>
           </xs:complexType>
         </xs:element>
@@ -163,7 +185,7 @@
               <xs:element name="PaymentDate" type="xs:date"/>
             </xs:sequence>
             <xs:attribute name="PaymentID" type="xs:ID" use="required"/>
-            <xs:attribute name="OrderID" type="xs:IDREF" use="required"/>
+            <xs:attributeGroup ref="OrderReferenceGroup"/>
           </xs:complexType>
         </xs:element>
       </xs:sequence>
@@ -184,7 +206,7 @@
               <xs:element name="Note" type="xs:string"/>
             </xs:sequence>
             <xs:attribute name="TrackingID" type="xs:ID" use="required"/>
-            <xs:attribute name="OrderID" type="xs:IDREF" use="required"/>
+            <xs:attributeGroup ref="OrderReferenceGroup"/>
           </xs:complexType>
         </xs:element>
       </xs:sequence>
