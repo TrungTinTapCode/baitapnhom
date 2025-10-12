@@ -55,39 +55,39 @@
     <Address AddressID="A103" CustomerID="C3">
       <Street>123 cách mạng tháng 8</Street>
       <City>Cần Thơ</City>
-      <District>Ninh Kiều</District>
+      <District>Bình Thủy</District>
       <Ward>An Phú</Ward>
     </Address>
     <Address AddressID="A104" CustomerID="C4">
       <Street>34 Hai Bà Trưng</Street>
       <City>Cần Thơ</City>
-      <District>Ô Môn</District>
+      <District>Bình Thủy</District>
       <Ward>Hậu Nghĩa</Ward>
     </Address>
     <Address AddressID="A105" CustomerID="C5">
       <Street>123 Lý Tự Trọng</Street>
       <City>Cần Thơ</City>
-      <District>Ô Môn</District>
+      <District>Cái Răng</District>
       <Ward>Bình An</Ward>
     </Address>
     <Address AddressID="A106" CustomerID="C6">
       <Street>123 Lê Lợi</Street>
       <City>Cần Thơ</City>
-      <District>Bình Thủy</District>
+      <District>Cái Răng</District>
       <Ward>Hạnh Phúc</Ward>
     </Address>
     <Address AddressID="A107" CustomerID="C7">
       <Street>3 Võ Trường Toản</Street>
       <City>Cần Thơ</City>
-      <District>Bình Thủy</District>
+      <District>Ô Môn</District>
       <Ward>Khánh An</Ward>
     </Address>
   </Addresses>
 
   <Categories>
     <Category CategoryID="Ca1">
-      <CategoryName>Điện thoại</CategoryName>
-      <Description>Smartphone và phụ kiện</Description>
+      <CategoryName>Sức khỏe -Y tế</CategoryName>
+      <Description>Thuốc, băng cá nhân, thực phẩm chức năng</Description>
     </Category>
     <Category CategoryID="Ca2">
       <CategoryName>Gia Dụng</CategoryName>
@@ -99,7 +99,7 @@
     </Category>
     <Category CategoryID="Ca4">
       <CategoryName>Phụ kiện công nghệ</CategoryName>
-      <Description>Tai nghe, sạc, cáp</Description>
+      <Description>Tai nghe, sạc, cáp,...</Description>
     </Category>
     <Category CategoryID="Ca5">
       <CategoryName>Thời trang</CategoryName>
@@ -110,46 +110,46 @@
       <Description>Thực phẩm đóng gói, cà phê, Trà</Description>
     </Category>
     <Category CategoryID="Ca7">
-      <CategoryName>Thiết bị mạng</CategoryName>
-      <Description>Router, modem, bộ phát WiFi</Description>
+      <CategoryName>Sách-Văn phòng phẩm</CategoryName>
+      <Description>Tập vở, thước kẻ, bút chì,...</Description>
     </Category>
   </Categories>
 
   <Products>
     <Product ProductID="P1" CategoryID="Ca1">
-      <ProductName>iPhone 14</ProductName>
-      <Price>25000000</Price>
-      <Weight>0.172</Weight>
+      <ProductName>Vitamin C 500mg</ProductName>
+      <Price>150000</Price>
+      <Weight>0.1</Weight>
     </Product>
-    <Product ProductID="P2" CategoryID="Ca1">
-      <ProductName>Samsung Galaxy S23</ProductName>
-      <Price>21000000</Price>
-      <Weight>0.168</Weight>
+    <Product ProductID="P2" CategoryID="Ca2">
+      <ProductName>Nồi chiên không dầu Philips</ProductName>
+      <Price>2800000</Price>
+      <Weight>4.5</Weight>
     </Product>
-    <Product ProductID="P3" CategoryID="Ca2">
-      <ProductName>MacBook Air M2</ProductName>
-      <Price>32000000</Price>
-      <Weight>1.24</Weight>
+    <Product ProductID="P3" CategoryID="Ca3">
+      <ProductName>Kem dưỡng ẩm CeraVe</ProductName>
+      <Price>380000</Price>
+      <Weight>0.25</Weight>
     </Product>
-    <Product ProductID="P4" CategoryID="Ca3">
-      <ProductName>iPad Pro 11</ProductName>
-      <Price>27000000</Price>
-      <Weight>0.470</Weight>
+    <Product ProductID="P4" CategoryID="Ca4">
+      <ProductName>Tai nghe Bluetooth Sony</ProductName>
+      <Price>1200000</Price>
+      <Weight>0.2</Weight>
     </Product>
-    <Product ProductID="P5" CategoryID="Ca4">
-      <ProductName>AirPods Pro 2</ProductName>
-      <Price>5500000</Price>
-      <Weight>0.056</Weight>
+    <Product ProductID="P5" CategoryID="Ca5">
+      <ProductName>Áo sơ mi nam tay dài</ProductName>
+      <Price>350000</Price>
+      <Weight>0.3</Weight>
     </Product>
-    <Product ProductID="P6" CategoryID="Ca5">
-      <ProductName>Apple Watch Series 9</ProductName>
-      <Price>13000000</Price>
-      <Weight>0.040</Weight>
+    <Product ProductID="P6" CategoryID="Ca6">
+      <ProductName>Cà phê hòa tan G7</ProductName>
+      <Price>65000</Price>
+      <Weight>0.2</Weight>
     </Product>
-    <Product ProductID="P7" CategoryID="Ca6">
-      <ProductName>Canon EOS M50</ProductName>
-      <Price>15500000</Price>
-      <Weight>0.387</Weight>
+    <Product ProductID="P7" CategoryID="Ca7">
+      <ProductName>Tập 200 trang Campus</ProductName>
+      <Price>22000</Price>
+      <Weight>0.4</Weight>
     </Product>
   </Products>
 
@@ -158,43 +158,43 @@
       <FullName>Lê Văn C</FullName>
       <ImgUrl>/images/shipper1.jpg</ImgUrl>
       <Phone>0934567890</Phone>
-      <Area>Hà Nội</Area>
+      <Area>Ninh Kiều</Area>
     </Shipper>
     <Shipper ShipperID="S2">
       <FullName>Nguyễn Văn D</FullName>
       <ImgUrl>/images/shipper2.jpg</ImgUrl>
       <Phone>0987654321</Phone>
-      <Area>TP. Hồ Chí Minh</Area>
+      <Area>Ninh Kiều</Area>
     </Shipper>
     <Shipper ShipperID="S3">
       <FullName>Trần Thị H</FullName>
       <ImgUrl>/images/shipper3.jpg</ImgUrl>
       <Phone>0912345678</Phone>
-      <Area>Đà Nẵng</Area>
+      <Area>Bình Thủy</Area>
     </Shipper>
     <Shipper ShipperID="S4">
       <FullName>Phạm Văn E</FullName>
       <ImgUrl>/images/shipper4.jpg</ImgUrl>
       <Phone>0901112233</Phone>
-      <Area>Cần Thơ</Area>
+      <Area>Bình Thủy</Area>
     </Shipper>
     <Shipper ShipperID="S5">
       <FullName>Ngô Thị M</FullName>
       <ImgUrl>/images/shipper5.jpg</ImgUrl>
       <Phone>0977223344</Phone>
-      <Area>Hải Phòng</Area>
+      <Area>Cái Răng</Area>
     </Shipper>
     <Shipper ShipperID="S6">
       <FullName>Hoàng Quốc Bảo</FullName>
       <ImgUrl>/images/shipper6.jpg</ImgUrl>
       <Phone>0969334455</Phone>
-      <Area>Nha Trang</Area>
+      <Area>Cái Răng</Area>
     </Shipper>
     <Shipper ShipperID="S7">
       <FullName>Đinh Văn L</FullName>
       <ImgUrl>/images/shipper7.jpg</ImgUrl>
       <Phone>0933998877</Phone>
-      <Area>Huế</Area>
+      <Area>Ô Môn</Area>
     </Shipper>
   </Shippers>
 
@@ -202,68 +202,68 @@
     <Order OrderID="O1001" CustomerID="C1" ShipperID="S1" AddressID="A101">
       <OrderDate>2024-10-01</OrderDate>
       <Status>Đang giao</Status>
-      <TotalAmount>25000000</TotalAmount>
+      <TotalAmount>200000</TotalAmount>
     </Order>
     <Order OrderID="O1002" CustomerID="C2" ShipperID="S2" AddressID="A102">
       <OrderDate>2024-10-02</OrderDate>
       <Status>Hoàn tất</Status>
-      <TotalAmount>21000000</TotalAmount>
+      <TotalAmount>300000</TotalAmount>
     </Order>
     <Order OrderID="O1003" CustomerID="C3" ShipperID="S3" AddressID="A103">
       <OrderDate>2024-10-03</OrderDate>
       <Status>Đang xử lý</Status>
-      <TotalAmount>32000000</TotalAmount>
+      <TotalAmount>400000</TotalAmount>
     </Order>
     <Order OrderID="O1004" CustomerID="C4" ShipperID="S4" AddressID="A104">
       <OrderDate>2024-10-04</OrderDate>
       <Status>Đang giao</Status>
-      <TotalAmount>5500000</TotalAmount>
+      <TotalAmount>1250000</TotalAmount>
     </Order>
     <Order OrderID="O1005" CustomerID="C5" ShipperID="S5" AddressID="A105">
       <OrderDate>2024-10-05</OrderDate>
       <Status>Đã hủy</Status>
-      <TotalAmount>15500000</TotalAmount>
+      <TotalAmount>400000</TotalAmount>
     </Order>
     <Order OrderID="O1006" CustomerID="C6" ShipperID="S6" AddressID="A106">
       <OrderDate>2024-10-06</OrderDate>
       <Status>Hoàn tất</Status>
-      <TotalAmount>13000000</TotalAmount>
+      <TotalAmount>80000</TotalAmount>
     </Order>
     <Order OrderID="O1007" CustomerID="C7" ShipperID="S7" AddressID="A107">
       <OrderDate>2024-10-07</OrderDate>
       <Status>Đang giao</Status>
-      <TotalAmount>27000000</TotalAmount>
+      <TotalAmount>30000</TotalAmount>
     </Order>
   </Orders>
 
   <OrderDetails>
     <OrderDetail OrderID="O1001" ProductID="P1">
       <Quantity>1</Quantity>
-      <UnitPrice>25000000</UnitPrice>
+      <UnitPrice>150000</UnitPrice>
     </OrderDetail>
     <OrderDetail OrderID="O1002" ProductID="P2">
       <Quantity>1</Quantity>
-      <UnitPrice>21000000</UnitPrice>
+      <UnitPrice>2800000</UnitPrice>
     </OrderDetail>
     <OrderDetail OrderID="O1003" ProductID="P3">
       <Quantity>1</Quantity>
-      <UnitPrice>32000000</UnitPrice>
+      <UnitPrice>380000</UnitPrice>
     </OrderDetail>
     <OrderDetail OrderID="O1004" ProductID="P5">
       <Quantity>1</Quantity>
-      <UnitPrice>5500000</UnitPrice>
+      <UnitPrice>1200000</UnitPrice>
     </OrderDetail>
     <OrderDetail OrderID="O1005" ProductID="P7">
       <Quantity>1</Quantity>
-      <UnitPrice>15500000</UnitPrice>
+      <UnitPrice>350000</UnitPrice>
     </OrderDetail>
     <OrderDetail OrderID="O1006" ProductID="P6">
       <Quantity>1</Quantity>
-      <UnitPrice>13000000</UnitPrice>
+      <UnitPrice>65000</UnitPrice>
     </OrderDetail>
     <OrderDetail OrderID="O1007" ProductID="P4">
       <Quantity>1</Quantity>
-      <UnitPrice>27000000</UnitPrice>
+      <UnitPrice>22000</UnitPrice>
     </OrderDetail>
   </OrderDetails>
 
@@ -308,49 +308,49 @@
   <Trackings>
     <Tracking TrackingID="T1" OrderID="O1001">
       <Status>Shipped</Status>
-      <Location>Hà Nội</Location>
+      <Location>Ninh Kiều</Location>
       <UpdateTime>2024-10-02T08:00:00</UpdateTime>
       <EstimatedDeliveryTime>2024-10-05T12:00:00</EstimatedDeliveryTime>
       <Note>Đang trên đường giao</Note>
     </Tracking>
     <Tracking TrackingID="T2" OrderID="O1002">
       <Status>Delivered</Status>
-      <Location>TP. Hồ Chí Minh</Location>
+      <Location>Ninh Kiều</Location>
       <UpdateTime>2024-10-03T10:00:00</UpdateTime>
       <EstimatedDeliveryTime>2024-10-03T11:00:00</EstimatedDeliveryTime>
       <Note>Đã giao thành công</Note>
     </Tracking>
     <Tracking TrackingID="T3" OrderID="O1003">
       <Status>Processing</Status>
-      <Location>Đà Nẵng</Location>
+      <Location>Bình Thủy</Location>
       <UpdateTime>2024-10-04T09:00:00</UpdateTime>
       <EstimatedDeliveryTime>2024-10-07T12:00:00</EstimatedDeliveryTime>
       <Note>Đang đóng gói</Note>
     </Tracking>
     <Tracking TrackingID="T4" OrderID="O1004">
       <Status>Shipped</Status>
-      <Location>Cần Thơ</Location>
+      <Location>Bình Thủy</Location>
       <UpdateTime>2024-10-05T15:00:00</UpdateTime>
       <EstimatedDeliveryTime>2024-10-08T09:00:00</EstimatedDeliveryTime>
       <Note>Đang vận chuyển</Note>
     </Tracking>
     <Tracking TrackingID="T5" OrderID="O1005">
       <Status>Cancelled</Status>
-      <Location>Hải Phòng</Location>
+      <Location>Cái Răng</Location>
       <UpdateTime>2024-10-06T11:00:00</UpdateTime>
       <EstimatedDeliveryTime>2024-10-09T10:00:00</EstimatedDeliveryTime>
       <Note>Khách hủy đơn</Note>
     </Tracking>
     <Tracking TrackingID="T6" OrderID="O1006">
       <Status>Delivered</Status>
-      <Location>Nha Trang</Location>
+      <Location>Cái Răng</Location>
       <UpdateTime>2024-10-07T13:00:00</UpdateTime>
       <EstimatedDeliveryTime>2024-10-07T11:00:00</EstimatedDeliveryTime>
       <Note>Đã giao hàng</Note>
     </Tracking>
     <Tracking TrackingID="T7" OrderID="O1007">
       <Status>In Transit</Status>
-      <Location>Huế</Location>
+      <Location>Ô Môn</Location>
       <UpdateTime>2024-10-08T14:00:00</UpdateTime>
       <EstimatedDeliveryTime>2024-10-10T12:00:00</EstimatedDeliveryTime>
       <Note>Đang giao</Note>
