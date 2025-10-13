@@ -1,5 +1,6 @@
 <!ELEMENT ECommerce (Customers, Addresses, Categories, Products, Shippers, Orders, OrderDetails, Payments, Trackings)>
 
+
 <!-- ================== CUSTOMERS ================== -->
 <!ELEMENT Customers (Customer+)>
 <!ELEMENT Customer (FullName, Phone, Email)>

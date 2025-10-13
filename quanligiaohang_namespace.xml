@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ECommerce xmlns="http://example.com/ecommerce"
+          xmlns:cust="http://example.com/customer"
+          xmlns:addr="http://example.com/address"
+          xmlns:cat="http://example.com/category"
+          xmlns:prod="http://example.com/product"
+          xmlns:ship="http://example.com/shipper"
+          xmlns:ord="http://example.com/order"
+          xmlns:pay="http://example.com/payment"
+          xmlns:track="http://example.com/tracking">
+
+  <cust:Customers>
+    <cust:Customer CustomerID="C1" DefaultAddressID="A101">
+      <cust:FullName>Nguyễn Văn An</cust:FullName>
+      <cust:Phone>0912345678</cust:Phone>
+      <cust:Email>an.nguyen@gmail.com</cust:Email>
+    </cust:Customer>
+    <cust:Customer CustomerID="C2" DefaultAddressID="A102">
+      <cust:FullName>Thái Võ Tường Vy</cust:FullName>
+      <cust:Phone>0923456789</cust:Phone>
+      <cust:Email>vy.thaivo@gmail.com</cust:Email>
+    </cust:Customer>
+    <cust:Customer CustomerID="C3" DefaultAddressID="A103">
+      <cust:FullName>Trần My</cust:FullName>
+      <cust:Phone>0933456789</cust:Phone>
+      <cust:Email>my.tran@gmail.com</cust:Email>
+    </cust:Customer>
+    <cust:Customer CustomerID="C4" DefaultAddressID="A104">
+      <cust:FullName>Nguyễn Chí Hùng</cust:FullName>
+      <cust:Phone>0943456789</cust:Phone>
+      <cust:Email>hung.nguyen@gmail.com</cust:Email>
+    </cust:Customer>
+    <cust:Customer CustomerID="C5" DefaultAddressID="A105">
+      <cust:FullName>Mai Kim Trí</cust:FullName>
+      <cust:Phone>0953456789</cust:Phone>
+      <cust:Email>tri.mai@gmail.com</cust:Email>
+    </cust:Customer>
+    <cust:Customer CustomerID="C6" DefaultAddressID="A106">
+      <cust:FullName>Huỳnh Hữu Phước</cust:FullName>
+      <cust:Phone>0963456789</cust:Phone>
+      <cust:Email>phuoc.huynh@gmail.com</cust:Email>
+    </cust:Customer>
+    <cust:Customer CustomerID="C7" DefaultAddressID="A107">
+      <cust:FullName>Nguyễn Trung Tín</cust:FullName>
+      <cust:Phone>0973456789</cust:Phone>
+      <cust:Email>tin.nguyen@gmail.com</cust:Email>
+    </cust:Customer>
+  </cust:Customers>
+
+  <addr:Addresses>
+    <addr:Address AddressID="A101" CustomerID="C1">
+      <addr:Street>123 Lê Lợi</addr:Street>
+      <addr:City>Cần Thơ</addr:City>
+      <addr:District>Ninh Kiêu</addr:District>
+      <addr:Ward>An Hòa</addr:Ward>
+    </addr:Address>
+    <addr:Address AddressID="A102" CustomerID="C2">
+      <addr:Street>12 Lê Hồng Phong</addr:Street>
+      <addr:City>Cần Thơ</addr:City>
+      <addr:District>Ninh Kiều</addr:District>
+      <addr:Ward>An Khánh</addr:Ward>
+    </addr:Address>
+    <addr:Address AddressID="A103" CustomerID="C3">
+      <addr:Street>123 cách mạng tháng 8</addr:Street>
+      <addr:City>Cần Thơ</addr:City>
+      <addr:District>Bình Thủy</addr:District>
+      <addr:Ward>An Phú</addr:Ward>
+    </addr:Address>
+    <addr:Address AddressID="A104" CustomerID="C4">
+      <addr:Street>34 Hai Bà Trưng</addr:Street>
+      <addr:City>Cần Thơ</addr:City>
+      <addr:District>Bình Thủy</addr:District>
+      <addr:Ward>Hậu Nghĩa</addr:Ward>
+    </addr:Address>
+    <addr:Address AddressID="A105" CustomerID="C5">
+      <addr:Street>123 Lý Tự Trọng</addr:Street>
+      <addr:City>Cần Thơ</addr:City>
+      <addr:District>Cái Răng</addr:District>
+      <addr:Ward>Bình An</addr:Ward>
+    </addr:Address>
+    <addr:Address AddressID="A106" CustomerID="C6">
+      <addr:Street>123 Lê Lợi</addr:Street>
+      <addr:City>Cần Thơ</addr:City>
+      <addr:District>Cái Răng</addr:District>
+      <addr:Ward>Hạnh Phúc</addr:Ward>
+    </addr:Address>
+    <addr:Address AddressID="A107" CustomerID="C7">
+      <addr:Street>3 Võ Trường Toản</addr:Street>
+      <addr:City>Cần Thơ</addr:City>
+      <addr:District>Ô Môn</addr:District>
+      <addr:Ward>Khánh An</addr:Ward>
+    </addr:Address>
+  </addr:Addresses>
+
+  <cat:Categories>
+    <cat:Category CategoryID="Ca1">
+      <cat:CategoryName>Sức khỏe -Y tế</cat:CategoryName>
+      <cat:Description>Thuốc, băng cá nhân, thực phẩm chức năng</cat:Description>
+    </cat:Category>
+    <cat:Category CategoryID="Ca2">
+      <cat:CategoryName>Gia Dụng</cat:CategoryName>
+      <cat:Description>Đồ gia dụng các loại</cat:Description>
+    </cat:Category>
+    <cat:Category CategoryID="Ca3">
+      <cat:CategoryName>Mỹ Phẩm</cat:CategoryName>
+      <cat:Description>các sản phẩm làm đẹp</cat:Description>
+    </cat:Category>
+    <cat:Category CategoryID="Ca4">
+      <cat:CategoryName>Phụ kiện công nghệ</cat:CategoryName>
+      <cat:Description>Tai nghe, sạc, cáp,...</cat:Description>
+    </cat:Category>
+    <cat:Category CategoryID="Ca5">
+      <cat:CategoryName>Thời trang</cat:CategoryName>
+      <cat:Description>Áo, quần, giày, túi xách, đồng hồ,...</cat:Description>
+    </cat:Category>
+    <cat:Category CategoryID="Ca6">
+      <cat:CategoryName>Thực phẩm-Đồ uống</cat:CategoryName>
+      <cat:Description>Thực phẩm đóng gói, cà phê, Trà</cat:Description>
+    </cat:Category>
+    <cat:Category CategoryID="Ca7">
+      <cat:CategoryName>Sách-Văn phòng phẩm</cat:CategoryName>
+      <cat:Description>Tập vở, thước kẻ, bút chì,...</cat:Description>
+    </cat:Category>
+  </cat:Categories>
+
+  <prod:Products>
+    <prod:Product ProductID="P1" CategoryID="Ca1">
+      <prod:ProductName>Vitamin C 500mg</prod:ProductName>
+      <prod:Price>150000</prod:Price>
+      <prod:Weight>0.1</prod:Weight>
+    </prod:Product>
+    <prod:Product ProductID="P2" CategoryID="Ca2">
+      <prod:ProductName>Nồi chiên không dầu Philips</prod:ProductName>
+      <prod:Price>2800000</prod:Price>
+      <prod:Weight>4.5</prod:Weight>
+    </prod:Product>
+    <prod:Product ProductID="P3" CategoryID="Ca3">
+      <prod:ProductName>Kem dưỡng ẩm CeraVe</prod:ProductName>
+      <prod:Price>380000</prod:Price>
+      <prod:Weight>0.25</prod:Weight>
+    </prod:Product>
+    <prod:Product ProductID="P4" CategoryID="Ca4">
+      <prod:ProductName>Tai nghe Bluetooth Sony</prod:ProductName>
+      <prod:Price>1200000</prod:Price>
+      <prod:Weight>0.2</prod:Weight>
+    </prod:Product>
+    <prod:Product ProductID="P5" CategoryID="Ca5">
+      <prod:ProductName>Áo sơ mi nam tay dài</prod:ProductName>
+      <prod:Price>350000</prod:Price>
+      <prod:Weight>0.3</prod:Weight>
+    </prod:Product>
+    <prod:Product ProductID="P6" CategoryID="Ca6">
+      <prod:ProductName>Cà phê hòa tan G7</prod:ProductName>
+      <prod:Price>65000</prod:Price>
+      <prod:Weight>0.2</prod:Weight>
+    </prod:Product>
+    <prod:Product ProductID="P7" CategoryID="Ca7">
+      <prod:ProductName>Tập 200 trang Campus</prod:ProductName>
+      <prod:Price>22000</prod:Price>
+      <prod:Weight>0.4</prod:Weight>
+    </prod:Product>
+  </prod:Products>
+
+  <ship:Shippers>
+    <ship:Shipper ShipperID="S1">
+      <ship:FullName>Lê Văn C</ship:FullName>
+      <ship:ImgUrl>/images/shipper1.jpg</ship:ImgUrl>
+      <ship:Phone>0934567890</ship:Phone>
+      <ship:Area>Ninh Kiều</ship:Area>
+    </ship:Shipper>
+    <ship:Shipper ShipperID="S2">
+      <ship:FullName>Nguyễn Văn D</ship:FullName>
+      <ship:ImgUrl>/images/shipper2.jpg</ship:ImgUrl>
+      <ship:Phone>0987654321</ship:Phone>
+      <ship:Area>Ninh Kiều</ship:Area>
+    </ship:Shipper>
+    <ship:Shipper ShipperID="S3">
+      <ship:FullName>Trần Thị H</ship:FullName>
+      <ship:ImgUrl>/images/shipper3.jpg</ship:ImgUrl>
+      <ship:Phone>0912345678</ship:Phone>
+      <ship:Area>Bình Thủy</ship:Area>
+    </ship:Shipper>
+    <ship:Shipper ShipperID="S4">
+      <ship:FullName>Phạm Văn E</ship:FullName>
+      <ship:ImgUrl>/images/shipper4.jpg</ship:ImgUrl>
+      <ship:Phone>0901112233</ship:Phone>
+      <ship:Area>Bình Thủy</ship:Area>
+    </ship:Shipper>
+    <ship:Shipper ShipperID="S5">
+      <ship:FullName>Ngô Thị M</ship:FullName>
+      <ship:ImgUrl>/images/shipper5.jpg</ship:ImgUrl>
+      <ship:Phone>0977223344</ship:Phone>
+      <ship:Area>Cái Răng</ship:Area>
+    </ship:Shipper>
+    <ship:Shipper ShipperID="S6">
+      <ship:FullName>Hoàng Quốc Bảo</ship:FullName>
+      <ship:ImgUrl>/images/shipper6.jpg</ship:ImgUrl>
+      <ship:Phone>0969334455</ship:Phone>
+      <ship:Area>Cái Răng</ship:Area>
+    </ship:Shipper>
+    <ship:Shipper ShipperID="S7">
+      <ship:FullName>Đinh Văn L</ship:FullName>
+      <ship:ImgUrl>/images/shipper7.jpg</ship:ImgUrl>
+      <ship:Phone>0933998877</ship:Phone>
+      <ship:Area>Ô Môn</ship:Area>
+    </ship:Shipper>
+  </ship:Shippers>
+
+  <ord:Orders>
+    <ord:Order OrderID="O1001" CustomerID="C1" ShipperID="S1" AddressID="A101">
+      <ord:OrderDate>2024-10-01</ord:OrderDate>
+      <ord:Status>Đang giao</ord:Status>
+      <ord:TotalAmount>200000</ord:TotalAmount>
+    </ord:Order>
+    <ord:Order OrderID="O1002" CustomerID="C2" ShipperID="S2" AddressID="A102">
+      <ord:OrderDate>2024-10-02</ord:OrderDate>
+      <ord:Status>Hoàn tất</ord:Status>
+      <ord:TotalAmount>300000</ord:TotalAmount>
+    </ord:Order>
+    <ord:Order OrderID="O1003" CustomerID="C3" ShipperID="S3" AddressID="A103">
+      <ord:OrderDate>2024-10-03</ord:OrderDate>
+      <ord:Status>Đang xử lý</ord:Status>
+      <ord:TotalAmount>400000</ord:TotalAmount>
+    </ord:Order>
+    <ord:Order OrderID="O1004" CustomerID="C4" ShipperID="S4" AddressID="A104">
+      <ord:OrderDate>2024-10-04</ord:OrderDate>
+      <ord:Status>Đang giao</ord:Status>
+      <ord:TotalAmount>1250000</ord:TotalAmount>
+    </ord:Order>
+    <ord:Order OrderID="O1005" CustomerID="C5" ShipperID="S5" AddressID="A105">
+      <ord:OrderDate>2024-10-05</ord:OrderDate>
+      <ord:Status>Đã hủy</ord:Status>
+      <ord:TotalAmount>400000</ord:TotalAmount>
+    </ord:Order>
+    <ord:Order OrderID="O1006" CustomerID="C6" ShipperID="S6" AddressID="A106">
+      <ord:OrderDate>2024-10-06</ord:OrderDate>
+      <ord:Status>Hoàn tất</ord:Status>
+      <ord:TotalAmount>80000</ord:TotalAmount>
+    </ord:Order>
+    <ord:Order OrderID="O1007" CustomerID="C7" ShipperID="S7" AddressID="A107">
+      <ord:OrderDate>2024-10-07</ord:OrderDate>
+      <ord:Status>Đang giao</ord:Status>
+      <ord:TotalAmount>30000</ord:TotalAmount>
+    </ord:Order>
+  </ord:Orders>
+
+  <ord:OrderDetails>
+    <ord:OrderDetail OrderID="O1001" ProductID="P1">
+      <ord:Quantity>1</ord:Quantity>
+      <ord:UnitPrice>150000</ord:UnitPrice>
+    </ord:OrderDetail>
+    <ord:OrderDetail OrderID="O1002" ProductID="P2">
+      <ord:Quantity>1</ord:Quantity>
+      <ord:UnitPrice>2800000</ord:UnitPrice>
+    </ord:OrderDetail>
+    <ord:OrderDetail OrderID="O1003" ProductID="P3">
+      <ord:Quantity>1</ord:Quantity>
+      <ord:UnitPrice>380000</ord:UnitPrice>
+    </ord:OrderDetail>
+    <ord:OrderDetail OrderID="O1004" ProductID="P5">
+      <ord:Quantity>1</ord:Quantity>
+      <ord:UnitPrice>1200000</ord:UnitPrice>
+    </ord:OrderDetail>
+    <ord:OrderDetail OrderID="O1005" ProductID="P7">
+      <ord:Quantity>1</ord:Quantity>
+      <ord:UnitPrice>350000</ord:UnitPrice>
+    </ord:OrderDetail>
+    <ord:OrderDetail OrderID="O1006" ProductID="P6">
+      <ord:Quantity>1</ord:Quantity>
+      <ord:UnitPrice>65000</ord:UnitPrice>
+    </ord:OrderDetail>
+    <ord:OrderDetail OrderID="O1007" ProductID="P4">
+      <ord:Quantity>1</ord:Quantity>
+      <ord:UnitPrice>22000</ord:UnitPrice>
+    </ord:OrderDetail>
+  </ord:OrderDetails>
+
+  <pay:Payments>
+    <pay:Payment PaymentID="Pa1" OrderID="O1001">
+      <pay:PaymentType>Credit Card</pay:PaymentType>
+      <pay:PaymentStatus>Paid</pay:PaymentStatus>
+      <pay:PaymentDate>2024-10-01</pay:PaymentDate>
+    </pay:Payment>
+    <pay:Payment PaymentID="Pa2" OrderID="O1002">
+      <pay:PaymentType>COD</pay:PaymentType>
+      <pay:PaymentStatus>Paid</pay:PaymentStatus>
+      <pay:PaymentDate>2024-10-02</pay:PaymentDate>
+    </pay:Payment>
+    <pay:Payment PaymentID="Pa3" OrderID="O1003">
+      <pay:PaymentType>Bank Transfer</pay:PaymentType>
+      <pay:PaymentStatus>Pending</pay:PaymentStatus>
+      <pay:PaymentDate>2024-10-03</pay:PaymentDate>
+    </pay:Payment>
+    <pay:Payment PaymentID="Pa4" OrderID="O1004">
+      <pay:PaymentType>Momo</pay:PaymentType>
+      <pay:PaymentStatus>Paid</pay:PaymentStatus>
+      <pay:PaymentDate>2024-10-04</pay:PaymentDate>
+    </pay:Payment>
+    <pay:Payment PaymentID="Pa5" OrderID="O1005">
+      <pay:PaymentType>COD</pay:PaymentType>
+      <pay:PaymentStatus>Cancelled</pay:PaymentStatus>
+      <pay:PaymentDate>2024-10-05</pay:PaymentDate>
+    </pay:Payment>
+    <pay:Payment PaymentID="Pa6" OrderID="O1006">
+      <pay:PaymentType>Credit Card</pay:PaymentType>
+      <pay:PaymentStatus>Paid</pay:PaymentStatus>
+      <pay:PaymentDate>2024-10-06</pay:PaymentDate>
+    </pay:Payment>
+    <pay:Payment PaymentID="Pa7" OrderID="O1007">
+      <pay:PaymentType>Momo</pay:PaymentType>
+      <pay:PaymentStatus>Pending</pay:PaymentStatus>
+      <pay:PaymentDate>2024-10-07</pay:PaymentDate>
+    </pay:Payment>
+  </pay:Payments>
+
+  <track:Trackings>
+    <track:Tracking TrackingID="T1" OrderID="O1001">
+      <track:Status>Shipped</track:Status>
+      <track:Location>Ninh Kiều</track:Location>
+      <track:UpdateTime>2024-10-02T08:00:00</track:UpdateTime>
+      <track:EstimatedDeliveryTime>2024-10-05T12:00:00</track:EstimatedDeliveryTime>
+      <track:Note>Đang trên đường giao</track:Note>
+    </track:Tracking>
+    <track:Tracking TrackingID="T2" OrderID="O1002">
+      <track:Status>Delivered</track:Status>
+      <track:Location>Ninh Kiều</track:Location>
+      <track:UpdateTime>2024-10-03T10:00:00</track:UpdateTime>
+      <track:EstimatedDeliveryTime>2024-10-03T11:00:00</track:EstimatedDeliveryTime>
+      <track:Note>Đã giao thành công</track:Note>
+    </track:Tracking>
+    <track:Tracking TrackingID="T3" OrderID="O1003">
+      <track:Status>Processing</track:Status>
+      <track:Location>Bình Thủy</track:Location>
+      <track:UpdateTime>2024-10-04T09:00:00</track:UpdateTime>
+      <track:EstimatedDeliveryTime>2024-10-07T12:00:00</track:EstimatedDeliveryTime>
+      <track:Note>Đang đóng gói</track:Note>
+    </track:Tracking>
+    <track:Tracking TrackingID="T4" OrderID="O1004">
+      <track:Status>Shipped</track:Status>
+      <track:Location>Bình Thủy</track:Location>
+      <track:UpdateTime>2024-10-05T15:00:00</track:UpdateTime>
+      <track:EstimatedDeliveryTime>2024-10-08T09:00:00</track:EstimatedDeliveryTime>
+      <track:Note>Đang vận chuyển</track:Note>
+    </track:Tracking>
+    <track:Tracking TrackingID="T5" OrderID="O1005">
+      <track:Status>Cancelled</track:Status>
+      <track:Location>Cái Răng</track:Location>
+      <track:UpdateTime>2024-10-06T11:00:00</track:UpdateTime>
+      <track:EstimatedDeliveryTime>2024-10-09T10:00:00</track:EstimatedDeliveryTime>
+      <track:Note>Khách hủy đơn</track:Note>
+    </track:Tracking>
+    <track:Tracking TrackingID="T6" OrderID="O1006">
+      <track:Status>Delivered</track:Status>
+      <track:Location>Cái Răng</track:Location>
+      <track:UpdateTime>2024-10-07T13:00:00</track:UpdateTime>
+      <track:EstimatedDeliveryTime>2024-10-07T11:00:00</track:EstimatedDeliveryTime>
+      <track:Note>Đã giao hàng</track:Note>
+    </track:Tracking>
+    <track:Tracking TrackingID="T7" OrderID="O1007">
+      <track:Status>In Transit</track:Status>
+      <track:Location>Ô Môn</track:Location>
+      <track:UpdateTime>2024-10-08T14:00:00</track:UpdateTime>
+      <track:EstimatedDeliveryTime>2024-10-10T12:00:00</track:EstimatedDeliveryTime>
+      <track:Note>Đang giao</track:Note>
+    </track:Tracking>
+  </track:Trackings>
+
+</ECommerce>

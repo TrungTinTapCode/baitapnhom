@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE ECommerce SYSTEM "quanligiaohang.dtd">
+
 <ECommerce>
   <Customers>
     <Customer CustomerID="C1" DefaultAddressID="A101">
