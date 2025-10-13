@@ -1,22 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  
+
+  <!-- Custom Types -->
+  <xs:simpleType name="NonEmptyString">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="255"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="StatusType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Pending"/>
+      <xs:enumeration value="Confirmed"/>
+      <xs:enumeration value="Shipping"/>
+      <xs:enumeration value="Delivered"/>
+      <xs:enumeration value="Cancelled"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="PaymentStatusType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Pending"/>
+      <xs:enumeration value="Completed"/>
+      <xs:enumeration value="Failed"/>
+      <xs:enumeration value="Refunded"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="PaymentMethodType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Cash"/>
+      <xs:enumeration value="Credit Card"/>
+      <xs:enumeration value="Bank Transfer"/>
+      <xs:enumeration value="E-Wallet"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="PositiveDecimal">
+    <xs:restriction base="xs:decimal">
+      <xs:minExclusive value="0"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="PositiveInteger">
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+
   <!-- Address Group -->
   <xs:group name="AddressGroup">
     <xs:sequence>
-      <xs:element name="Street" type="xs:string"/>
-      <xs:element name="City" type="xs:string"/>
-      <xs:element name="District" type="xs:string"/>
-      <xs:element name="Ward" type="xs:string"/>
+      <xs:element name="Street" type="NonEmptyString"/>
+      <xs:element name="City" type="NonEmptyString"/>
+      <xs:element name="District" type="NonEmptyString"/>
+      <xs:element name="Ward" type="NonEmptyString"/>
     </xs:sequence>
   </xs:group>
 
   <!-- Contact Info Group -->
   <xs:group name="ContactInfoGroup">
     <xs:sequence>
-      <xs:element name="FullName" type="xs:string"/>
-      <xs:element name="Phone" type="xs:string"/>
-      <xs:element name="Email" type="xs:string"/>
+      <xs:element name="FullName" type="NonEmptyString"/>
+      <xs:element name="Phone">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{10,11}"/>
+            <xs:minLength value="10"/>
+            <xs:maxLength value="11"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Email">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[^@]+@[^\.]+\..+"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
     </xs:sequence>
   </xs:group>
 
@@ -30,6 +92,7 @@
     <xs:attribute name="CustomerID" type="xs:IDREF" use="required"/>
   </xs:attributeGroup>
 
+  <!-- Main Elements -->
   <xs:element name="ECommerce">
     <xs:complexType>
       <xs:sequence>
@@ -44,6 +107,93 @@
         <xs:element ref="Trackings"/>
       </xs:sequence>
     </xs:complexType>
+
+    <!-- Key Constraints -->
+    <xs:key name="CustomerKey">
+      <xs:selector xpath="Customers/Customer"/>
+      <xs:field xpath="@CustomerID"/>
+    </xs:key>
+
+    <xs:key name="AddressKey">
+      <xs:selector xpath="Addresses/Address"/>
+      <xs:field xpath="@AddressID"/>
+    </xs:key>
+
+    <xs:key name="CategoryKey">
+      <xs:selector xpath="Categories/Category"/>
+      <xs:field xpath="@CategoryID"/>
+    </xs:key>
+
+    <xs:key name="ProductKey">
+      <xs:selector xpath="Products/Product"/>
+      <xs:field xpath="@ProductID"/>
+    </xs:key>
+
+    <xs:key name="ShipperKey">
+      <xs:selector xpath="Shippers/Shipper"/>
+      <xs:field xpath="@ShipperID"/>
+    </xs:key>
+
+    <xs:key name="OrderKey">
+      <xs:selector xpath="Orders/Order"/>
+      <xs:field xpath="@OrderID"/>
+    </xs:key>
+
+    <xs:key name="PaymentKey">
+      <xs:selector xpath="Payments/Payment"/>
+      <xs:field xpath="@PaymentID"/>
+    </xs:key>
+
+    <xs:key name="TrackingKey">
+      <xs:selector xpath="Trackings/Tracking"/>
+      <xs:field xpath="@TrackingID"/>
+    </xs:key>
+
+    <!-- Reference Constraints -->
+    <xs:keyref name="CustomerAddressRef" refer="CustomerKey">
+      <xs:selector xpath="Addresses/Address"/>
+      <xs:field xpath="@CustomerID"/>
+    </xs:keyref>
+
+    <xs:keyref name="ProductCategoryRef" refer="CategoryKey">
+      <xs:selector xpath="Products/Product"/>
+      <xs:field xpath="@CategoryID"/>
+    </xs:keyref>
+
+    <xs:keyref name="OrderCustomerRef" refer="CustomerKey">
+      <xs:selector xpath="Orders/Order"/>
+      <xs:field xpath="@CustomerID"/>
+    </xs:keyref>
+
+    <xs:keyref name="OrderShipperRef" refer="ShipperKey">
+      <xs:selector xpath="Orders/Order"/>
+      <xs:field xpath="@ShipperID"/>
+    </xs:keyref>
+
+    <xs:keyref name="OrderAddressRef" refer="AddressKey">
+      <xs:selector xpath="Orders/Order"/>
+      <xs:field xpath="@AddressID"/>
+    </xs:keyref>
+
+    <xs:keyref name="OrderDetailOrderRef" refer="OrderKey">
+      <xs:selector xpath="OrderDetails/OrderDetail"/>
+      <xs:field xpath="@OrderID"/>
+    </xs:keyref>
+
+    <xs:keyref name="OrderDetailProductRef" refer="ProductKey">
+      <xs:selector xpath="OrderDetails/OrderDetail"/>
+      <xs:field xpath="@ProductID"/>
+    </xs:keyref>
+
+    <xs:keyref name="PaymentOrderRef" refer="OrderKey">
+      <xs:selector xpath="Payments/Payment"/>
+      <xs:field xpath="@OrderID"/>
+    </xs:keyref>
+
+    <xs:keyref name="TrackingOrderRef" refer="OrderKey">
+      <xs:selector xpath="Trackings/Tracking"/>
+      <xs:field xpath="@OrderID"/>
+    </xs:keyref>
   </xs:element>
 
   <!-- Customers -->
@@ -87,8 +237,8 @@
         <xs:element name="Category" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="CategoryName" type="xs:string"/>
-              <xs:element name="Description" type="xs:string"/>
+              <xs:element name="CategoryName" type="NonEmptyString"/>
+              <xs:element name="Description" type="NonEmptyString"/>
             </xs:sequence>
             <xs:attribute name="CategoryID" type="xs:ID" use="required"/>
           </xs:complexType>
@@ -104,9 +254,9 @@
         <xs:element name="Product" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ProductName" type="xs:string"/>
-              <xs:element name="Price" type="xs:decimal"/>
-              <xs:element name="Weight" type="xs:decimal"/>
+              <xs:element name="ProductName" type="NonEmptyString"/>
+              <xs:element name="Price" type="PositiveDecimal"/>
+              <xs:element name="Weight" type="PositiveDecimal"/>
             </xs:sequence>
             <xs:attribute name="ProductID" type="xs:ID" use="required"/>
             <xs:attribute name="CategoryID" type="xs:IDREF" use="required"/>
@@ -124,8 +274,14 @@
           <xs:complexType>
             <xs:sequence>
               <xs:group ref="ContactInfoGroup"/>
-              <xs:element name="ImgUrl" type="xs:string"/>
-              <xs:element name="Area" type="xs:string"/>
+              <xs:element name="ImgUrl">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:pattern value="https?://.+\..+"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Area" type="NonEmptyString"/>
             </xs:sequence>
             <xs:attribute name="ShipperID" type="xs:ID" use="required"/>
           </xs:complexType>
@@ -142,8 +298,8 @@
           <xs:complexType>
             <xs:sequence>
               <xs:element name="OrderDate" type="xs:date"/>
-              <xs:element name="Status" type="xs:string"/>
-              <xs:element name="TotalAmount" type="xs:decimal"/>
+              <xs:element name="Status" type="StatusType"/>
+              <xs:element name="TotalAmount" type="PositiveDecimal"/>
             </xs:sequence>
             <xs:attribute name="OrderID" type="xs:ID" use="required"/>
             <xs:attributeGroup ref="CustomerReferenceGroup"/>
@@ -162,8 +318,8 @@
         <xs:element name="OrderDetail" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Quantity" type="xs:int"/>
-              <xs:element name="UnitPrice" type="xs:decimal"/>
+              <xs:element name="Quantity" type="PositiveInteger"/>
+              <xs:element name="UnitPrice" type="PositiveDecimal"/>
             </xs:sequence>
             <xs:attributeGroup ref="OrderReferenceGroup"/>
             <xs:attribute name="ProductID" type="xs:IDREF" use="required"/>
@@ -180,8 +336,8 @@
         <xs:element name="Payment" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="PaymentType" type="xs:string"/>
-              <xs:element name="PaymentStatus" type="xs:string"/>
+              <xs:element name="PaymentType" type="PaymentMethodType"/>
+              <xs:element name="PaymentStatus" type="PaymentStatusType"/>
               <xs:element name="PaymentDate" type="xs:date"/>
             </xs:sequence>
             <xs:attribute name="PaymentID" type="xs:ID" use="required"/>
@@ -199,8 +355,8 @@
         <xs:element name="Tracking" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Status" type="xs:string"/>
-              <xs:element name="Location" type="xs:string"/>
+              <xs:element name="Status" type="NonEmptyString"/>
+              <xs:element name="Location" type="NonEmptyString"/>
               <xs:element name="UpdateTime" type="xs:dateTime"/>
               <xs:element name="EstimatedDeliveryTime" type="xs:dateTime"/>
               <xs:element name="Note" type="xs:string"/>
